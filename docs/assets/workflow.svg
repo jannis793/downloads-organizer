@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-label="downloads-organizer workflow from messy folder to organized categories and undo log">
+  <rect width="1120" height="520" fill="#f6f8fa"/>
+  <text x="70" y="74" fill="#24292f" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700">Safe organization workflow</text>
+  <text x="70" y="110" fill="#57606a" font-family="Inter, Arial, sans-serif" font-size="18">Preview first, move only when ready, and keep an undo log for every real run.</text>
+
+  <rect x="70" y="154" width="250" height="240" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="96" y="196" fill="#0969da" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">1. Preview</text>
+  <text x="96" y="236" fill="#24292f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">downloads-organizer</text>
+  <text x="96" y="260" fill="#24292f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">preview ~/Downloads</text>
+  <rect x="96" y="292" width="168" height="16" rx="4" fill="#dbeafe"/>
+  <rect x="96" y="322" width="196" height="16" rx="4" fill="#e9d5ff"/>
+  <rect x="96" y="352" width="142" height="16" rx="4" fill="#dcfce7"/>
+
+  <path d="M344 274 H414" fill="none" stroke="#8c959f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M404 262 L418 274 L404 286" fill="none" stroke="#8c959f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="440" y="154" width="250" height="240" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="466" y="196" fill="#0969da" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">2. Organize</text>
+  <text x="466" y="236" fill="#24292f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">downloads-organizer</text>
+  <text x="466" y="260" fill="#24292f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">run ~/Downloads</text>
+  <rect x="466" y="296" width="88" height="58" rx="8" fill="#dbeafe"/>
+  <rect x="572" y="296" width="88" height="58" rx="8" fill="#dcfce7"/>
+  <text x="484" y="330" fill="#1f2937" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Images</text>
+  <text x="598" y="330" fill="#1f2937" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">PDFs</text>
+
+  <path d="M714 274 H784" fill="none" stroke="#8c959f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M774 262 L788 274 L774 286" fill="none" stroke="#8c959f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="810" y="154" width="250" height="240" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="836" y="196" fill="#0969da" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">3. Undo</text>
+  <text x="836" y="236" fill="#24292f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">downloads-organizer</text>
+  <text x="836" y="260" fill="#24292f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">undo undo-log.json</text>
+  <rect x="836" y="296" width="198" height="74" rx="8" fill="#fff8c5" stroke="#d4a72c"/>
+  <text x="862" y="328" fill="#7d4e00" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">JSON undo log</text>
+  <text x="862" y="352" fill="#7d4e00" font-family="Inter, Arial, sans-serif" font-size="14">Restore moved files safely</text>
+
+  <text x="70" y="456" fill="#57606a" font-family="Inter, Arial, sans-serif" font-size="18">Duplicate detection uses SHA-256 hashes and moves later copies to Duplicates.</text>
+</svg>

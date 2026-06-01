@@ -102,6 +102,37 @@ def test_unique_destination_avoids_overwriting_existing_file(tmp_path: Path) -> 
     assert plans[0].destination.name == "photo (1).png"
 
 
+def test_recursive_plan_reserves_destinations_for_duplicate_names(tmp_path: Path) -> None:
+    first_folder = tmp_path / "first"
+    second_folder = tmp_path / "second"
+    first_folder.mkdir()
+    second_folder.mkdir()
+    (first_folder / "report.pdf").write_bytes(b"first")
+    (second_folder / "report.pdf").write_bytes(b"second")
+
+    plans = build_plan(
+        tmp_path,
+        OrganizerConfig(recursive=True, duplicate_detection=False),
+    )
+
+    assert [plan.destination.name for plan in plans] == ["report.pdf", "report (1).pdf"]
+
+
+def test_duplicate_plan_reserves_duplicate_destinations(tmp_path: Path) -> None:
+    (tmp_path / "a.txt").write_text("same", encoding="utf-8")
+    (tmp_path / "b.txt").write_text("same", encoding="utf-8")
+    nested = tmp_path / "nested"
+    nested.mkdir()
+    (nested / "b.txt").write_text("same", encoding="utf-8")
+
+    plans = build_plan(tmp_path, OrganizerConfig(recursive=True))
+
+    duplicate_destinations = [
+        plan.destination.name for plan in plans if plan.category == "Duplicates"
+    ]
+    assert duplicate_destinations == ["b.txt", "b (1).txt"]
+
+
 def test_load_config_supports_custom_categories(tmp_path: Path) -> None:
     config_file = tmp_path / "config.toml"
     config_file.write_text(

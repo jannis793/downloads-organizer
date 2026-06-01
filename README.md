@@ -6,7 +6,7 @@
 
 A cross-platform Typer and Rich CLI that organizes messy Downloads folders by file type, with dry runs, preview tables, duplicate detection, date-based renaming, TOML configuration, and undo logs.
 
-![CLI screenshot placeholder](docs/assets/cli-screenshot-placeholder.svg)
+![downloads-organizer preview command showing planned file moves](docs/assets/cli-screenshot.svg)
 
 ## Features
 
@@ -32,6 +32,7 @@ git clone https://github.com/jannis793/downloads-organizer.git
 cd downloads-organizer
 python -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 ```
 
@@ -39,6 +40,7 @@ On Windows PowerShell, activate with:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 ```
 
@@ -118,14 +120,15 @@ Installers = [".dmg", ".pkg", ".exe", ".msi", ".deb", ".rpm"]
 ## Development
 
 ```bash
+python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 ruff check .
 pytest
 ```
 
-## Demo
+## Workflow
 
-![Demo GIF placeholder](docs/assets/demo-placeholder.svg)
+![downloads-organizer preview, organize, and undo workflow](docs/assets/workflow.svg)
 
 ## Contributing
 

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="Demo GIF placeholder">
-  <rect width="960" height="420" fill="#f6f8fa"/>
-  <rect x="70" y="70" width="820" height="280" rx="8" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="120" y="150" fill="#24292f" font-family="Arial, sans-serif" font-size="34" font-weight="700">Demo GIF Placeholder</text>
-  <text x="120" y="210" fill="#57606a" font-family="Arial, sans-serif" font-size="22">Replace this with a recording of preview, dry-run, organize, and undo.</text>
-  <circle cx="784" cy="210" r="54" fill="#0969da"/>
-  <polygon points="766,178 766,242 820,210" fill="#ffffff"/>
-</svg>
-

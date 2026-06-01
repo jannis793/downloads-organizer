@@ -7,6 +7,7 @@ Thank you for helping improve `downloads-organizer`.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 ```
 
@@ -14,6 +15,7 @@ On Windows PowerShell:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 ```
 
@@ -36,4 +38,3 @@ pytest
 ## Reporting Issues
 
 Please include your operating system, Python version, command used, expected result, and actual result.
-

@@ -37,6 +37,7 @@ def organize(target: Path, config: OrganizerConfig, dry_run: bool | None = None)
 def build_plan(target: Path, config: OrganizerConfig) -> list[FilePlan]:
     plans: list[FilePlan] = []
     seen_hashes: dict[str, Path] = {}
+    reserved_destinations: set[Path] = set()
 
     for file_path in _iter_files(target, config):
         if file_path.name in config.ignore_names:
@@ -48,7 +49,11 @@ def build_plan(target: Path, config: OrganizerConfig) -> list[FilePlan]:
         duplicate_of = _find_duplicate(file_path, seen_hashes, config.duplicate_detection)
         if duplicate_of:
             duplicate_folder = target / "Duplicates"
-            destination = unique_destination(duplicate_folder / file_path.name)
+            destination = unique_destination(
+                duplicate_folder / file_path.name,
+                reserved_destinations,
+            )
+            reserved_destinations.add(destination)
             plans.append(
                 FilePlan(
                     source=file_path,
@@ -61,7 +66,11 @@ def build_plan(target: Path, config: OrganizerConfig) -> list[FilePlan]:
             continue
 
         destination_name = _date_prefixed_name(file_path) if config.date_rename else file_path.name
-        destination = unique_destination(target / category / destination_name)
+        destination = unique_destination(
+            target / category / destination_name,
+            reserved_destinations,
+        )
+        reserved_destinations.add(destination)
         plans.append(
             FilePlan(source=file_path, destination=destination, category=category, action="move")
         )
@@ -76,8 +85,9 @@ def categorize(path: Path, config: OrganizerConfig) -> str:
     return config.others_name
 
 
-def unique_destination(destination: Path) -> Path:
-    if not destination.exists():
+def unique_destination(destination: Path, reserved: set[Path] | None = None) -> Path:
+    reserved = reserved or set()
+    if not destination.exists() and destination not in reserved:
         return destination
 
     stem = destination.stem
@@ -86,7 +96,7 @@ def unique_destination(destination: Path) -> Path:
     counter = 1
     while True:
         candidate = parent / f"{stem} ({counter}){suffix}"
-        if not candidate.exists():
+        if not candidate.exists() and candidate not in reserved:
             return candidate
         counter += 1
 

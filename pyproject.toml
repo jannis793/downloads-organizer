@@ -49,7 +49,8 @@ downloads-organizer = "downloads_organizer.cli:app"
 packages = ["src/downloads_organizer"]
 
 [tool.pytest.ini_options]
-addopts = "--cov=downloads_organizer --cov-report=term-missing"
+addopts = "--cov=downloads_organizer --cov-report=term-missing --cov-fail-under=90"
+pythonpath = ["src"]
 testpaths = ["tests"]
 
 [tool.ruff]
