@@ -38,8 +38,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jannisbittner/downloads-organizer"
-Issues = "https://github.com/jannisbittner/downloads-organizer/issues"
+Homepage = "https://github.com/jannis793/downloads-organizer"
+Issues = "https://github.com/jannis793/downloads-organizer/issues"
 
 [project.scripts]
 downloads-organizer = "downloads_organizer.cli:app"

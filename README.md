@@ -1,6 +1,6 @@
 # downloads-organizer
 
-[![CI](https://github.com/jannisbittner/downloads-organizer/actions/workflows/ci.yml/badge.svg)](https://github.com/jannisbittner/downloads-organizer/actions/workflows/ci.yml)
+[![CI](https://github.com/jannis793/downloads-organizer/actions/workflows/ci.yml/badge.svg)](https://github.com/jannis793/downloads-organizer/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -28,7 +28,7 @@ pipx install downloads-organizer
 For local development:
 
 ```bash
-git clone https://github.com/jannisbittner/downloads-organizer.git
+git clone https://github.com/jannis793/downloads-organizer.git
 cd downloads-organizer
 python -m venv .venv
 source .venv/bin/activate
@@ -134,4 +134,3 @@ Issues and pull requests are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING
 ## License
 
 MIT. See [LICENSE](LICENSE).
-
