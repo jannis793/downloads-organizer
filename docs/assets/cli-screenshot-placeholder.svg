@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="CLI screenshot placeholder">
+  <rect width="960" height="420" fill="#101418"/>
+  <rect x="40" y="40" width="880" height="340" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="72" y="92" fill="#58a6ff" font-family="monospace" font-size="24">downloads-organizer preview ~/Downloads</text>
+  <text x="72" y="148" fill="#d1d7e0" font-family="monospace" font-size="20">Action   Category       From                 To</text>
+  <text x="72" y="198" fill="#7ee787" font-family="monospace" font-size="20">move     Images         photo.jpg            Images/photo.jpg</text>
+  <text x="72" y="242" fill="#d2a8ff" font-family="monospace" font-size="20">move     PDFs           invoice.pdf          PDFs/invoice.pdf</text>
+  <text x="72" y="286" fill="#ffa657" font-family="monospace" font-size="20">move     Duplicates     copy.zip             Duplicates/copy.zip</text>
+</svg>
+
